@@ -1,14 +1,18 @@
 import React, { PureComponent } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet, ScrollView } from 'react-native'
 
 import CategoryItem from '../../component/Category'
+import SearchBar from '../../component/SearchBar'
+import Carausel from '../../component/Carausel'
 
 export default class HomePage extends PureComponent {
     render() {
         return (
-            <View style={styles.container}>
+            <ScrollView style={styles.container}>
                 <CategoryItem/>
-            </View>
+                <SearchBar/>
+                <Carausel/>
+            </ScrollView>
         )
     }
 }
@@ -16,7 +20,7 @@ export default class HomePage extends PureComponent {
 const styles = StyleSheet.create({
     container : {
         flex:1, 
-        paddingHorizontal:17, 
+        paddingHorizontal:10, 
         backgroundColor:'#E5E5E5',
     },
 })
