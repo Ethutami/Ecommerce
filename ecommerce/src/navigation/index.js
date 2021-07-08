@@ -76,7 +76,7 @@ export default class RootStack extends PureComponent {
     render() {
         return (
             <NavigationContainer >
-                <Stack.Navigator initialRouteName='TabNav' headerMode={false}>
+                <Stack.Navigator initialRouteName='Launch' headerMode={false}>
                     <Stack.Screen name="Launch" component={LaunchPage} />
                     <Stack.Screen name="TabNav" component={TabNavigation} />
                 </Stack.Navigator>
