@@ -11,7 +11,6 @@ const mapStateToProps = state => {
 export class CategoryItem extends PureComponent {
     
     render() {
-        console.log(this.props.categoryItem);
         return (
             <View style={{}}>
                 <View style={styles.wrap_label}>
@@ -26,7 +25,7 @@ export class CategoryItem extends PureComponent {
                             this.props.categoryItem.map((item)=>{
                                 return(
                                     <View key={item.id} style={styles.wrap_item}>
-                                        <View style={styles.circle_orange}>
+                                        <View style={styles.circle_item}>
                                         </View>
                                         <Text style={styles.lebel_item}>{item.categoryName}</Text>
                                     </View>
@@ -64,13 +63,19 @@ const styles = StyleSheet.create({
     wrap_item : {
         marginTop:24, 
         width:65, 
-        marginHorizontal:10
+        marginHorizontal:10,
+       
     },
-    circle_orange : {
+    circle_item : {
         width:65, 
         height:65, 
         borderRadius:65/2, 
         backgroundColor:'#ffffff',
+        shadowColor: '#BFC5F5',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.5,
+        shadowRadius: 2,
+        elevation: 2,
     },
     lebel_item : {
         alignSelf:'center',

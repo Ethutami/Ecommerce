@@ -59,7 +59,7 @@ export class TabNavigation extends PureComponent {
                     showLabel : false,
                     style:{
                         color : '#ffffff',
-                        backgroundColor: '#010035'
+                        backgroundColor: '#010035',
                     }
                 }}
             >
