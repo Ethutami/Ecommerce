@@ -1,3 +1,8 @@
+ import image1 from '../../assets/image/1.jpg'
+ import image2 from '../../assets/image/2.jpg'
+ import image3 from '../../assets/image/3.jpg'
+ import image4 from '../../assets/image/4.png'
+
 const initialState = {
     categoryItem: [
       {
@@ -41,6 +46,36 @@ const initialState = {
         icon : 'y'
       },
     ],
+    entries:[
+      {
+        id : 1,
+        title : 'afffk',
+        photo : image1,
+        price : '$16',
+        name : 'cale',
+      },
+      {
+        id : 2,
+        title : 'dhhf',
+        photo : image2,
+        price : '$1,2',
+        name : 'tami',
+      },
+      {
+        id : 3,
+        title : 'thd',
+        photo : image3,
+        price : '$1',
+        name : 'other',
+      },
+      {
+        id : 4,
+        title : 'thd',
+        photo : image4,
+        price : '$1',
+        name : 'baby'
+      },
+    ]
   };
   
   const Product = (state = initialState, action) => {
