@@ -14,6 +14,7 @@ export default class HomePage extends PureComponent {
                 <CategoryItem/>
                 <SearchBar/>
                 <Slider/>
+                <ItemList/>
             </ScrollView>
         )
     }
