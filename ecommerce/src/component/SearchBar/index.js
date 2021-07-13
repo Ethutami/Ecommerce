@@ -17,10 +17,10 @@ export default class ComponentSearchBar extends PureComponent {
     render() {
         return (
             <View style={styles.container}>
-                <TouchableWithoutFeedback onPress={()=>alert('j')}>
+                <TouchableWithoutFeedback onPress={()=>this.props.navigation.navigate('SearchPage')}>
                     <View style={styles.wrap_search} >
                         <Antdesign name='search1' color='#FF6E4E' size={16}/>
-                        <Text style={{marginLeft:12, color:'rgba(1, 0, 53, 0.5)'}}>search</Text>
+                        <Text style={styles.search_txt}>search</Text>
                     </View>
                 </TouchableWithoutFeedback>
                 <TouchableOpacity onPress ={()=> this.setState({switch_view:!this.state.switch_view} )}>
@@ -58,6 +58,10 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.5,
         shadowRadius: 2,
         elevation: 2,
+    },
+    search_txt : {
+        marginLeft:12, 
+        color:'rgba(1, 0, 53, 0.5)',
     },
 
 })
