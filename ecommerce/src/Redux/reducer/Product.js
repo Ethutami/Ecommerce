@@ -2,22 +2,23 @@
  import image2 from '../../assets/image/2.jpg'
  import image3 from '../../assets/image/3.jpg'
  import image4 from '../../assets/image/4.png'
+ import image5 from '../../assets/image/5.png'
 
 const initialState = {
     categoryItem: [
       {
         id : 1,
-        categoryName : 'woman',
+        categoryName : `Woman's Top`,
         icon : 'y'
       },
       {
         id : 2,
-        categoryName : 'woman',
+        categoryName : 'Bottom',
         icon : 'y'
       },
       {
         id : 3,
-        categoryName : 'woman',
+        categoryName : 'Kids',
         icon : 'y'
       },
       {
@@ -58,7 +59,7 @@ const initialState = {
         id : 2,
         title : 'dhhf',
         photo : image2,
-        price : '$1,2',
+        price : '$10000',
         name : 'tami',
       },
       {
@@ -74,6 +75,35 @@ const initialState = {
         photo : image4,
         price : '$1',
         name : 'baby'
+      },
+      {
+        id : 5,
+        title : 'yaalajd',
+        photo : image5,
+        price : '$1',
+        name : 'baby'
+      },
+    ],
+    productSelected:[
+      {
+        id : 1,
+        categoryName : `T-shirt`,
+        selected : false
+      },
+      {
+        id : 2,
+        categoryName : 'Crop tops',
+        selected : false
+      },
+      {
+        id : 3,
+        categoryName : 'Kardigan',
+        selected : false
+      },
+      {
+        id : 4,
+        categoryName : 'Outer',
+        selected : false
       },
     ]
   };
