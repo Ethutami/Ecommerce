@@ -8,12 +8,14 @@ import MaterialIcon from 'react-native-vector-icons/MaterialIcons'
 import Entypo from 'react-native-vector-icons/Entypo'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 
-import LaunchPage from '../page/launchPage';
+import LaunchPage from '../page/LaunchPage';
 import HomePage from '../page/HomePage/Index';
-import CartPage from '../page/cartPage';
+import CartPage from '../page/CartPage';
 import ProfilePage from '../page/ProfilePage';
-import FavoritePage from '../page/favoritePage';
+import FavoritePage from '../page/FavoritePage';
 import ShoppingPage from '../page/ShoppingPage';
+import SearchPage from '../page/SearchPage';
+import DetailsProducPage from '../page/DetailsProductPage';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -80,6 +82,8 @@ export default class RootStack extends PureComponent {
                     <Stack.Screen name="Launch" component={LaunchPage} />
                     <Stack.Screen name="TabNav" component={TabNavigation} />
                     <Stack.Screen name="ShoppingPage" component={ShoppingPage} initialParams={{Headline: ''}}/>
+                    <Stack.Screen name="SearchPage" component={SearchPage} />
+                    <Stack.Screen name="DetailsProductPage" component={DetailsProducPage} />
                 </Stack.Navigator>
             </NavigationContainer>
         )
