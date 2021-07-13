@@ -7,7 +7,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 import { Provider } from 'react-redux';
 import { persistor, store } from './src/Redux';
 
-import RootStack from './src/navigation';
+import RootStack from './src/rooting';
 
 const App = () => {
   const Stack = createStackNavigator();
