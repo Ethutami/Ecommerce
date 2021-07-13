@@ -73,7 +73,7 @@ export class ComponentProductSlider extends PureComponent {
                         itemWidth={itemWidth}
                         onSnapToItem={(index) => this.setState({ activeSlide: index }) }
                         />
-                    <View style={{position:'absolute', bottom:0, left:0, right:0, justifyContent:'center'}}>
+                    <View style={styles.pigination_container}>
                         { this.pagination }
                     </View>
                 </View>
@@ -113,6 +113,13 @@ const styles = StyleSheet.create({
         height:'100%', 
         width:'100%', 
         resizeMode:'stretch',
+    },
+    pigination_container : {
+        position:'absolute', 
+        bottom:0, 
+        left:0, 
+        right:0, 
+        justifyContent:'center'
     },
 })
 
