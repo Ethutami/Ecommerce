@@ -1,32 +1,124 @@
 import React, { PureComponent } from 'react'
-import { Image, ScrollView, Text, View } from 'react-native'
+import { Image, Pressable, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 import AntDesgn from 'react-native-vector-icons/AntDesign'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import ComponentNavigationBar from '../../component/NavigationBar'
 import image from '../../assets/image/1.jpg'
 
 
 export default class CartPage extends PureComponent {
+    constructor(props){
+        super(props)
+        this.state = {
+            checked : false
+        }
+    }
     render() {
         return (
-            <View style={{width:'100%'}}>
+            <View style={styles.container}>
                 <ComponentNavigationBar headline='Cart' navigation={this.props.navigation}/>
                 <ScrollView style={{marginTop:10}}>
-                    <View style={{backgroundColor:'#ffffff', padding:10, flexDirection:'row',alignItems:'center', width:'100%'}}>
-                        <Image source={image} style={{height:88, width:'25%', resizeMode:'stretch', borderRadius:10}}/>
-                        <View style={{paddingLeft:17, paddingRight:33, width:'50%'}}>
-                            <Text style={{fontSize:20, fontWeight:'500', color:'#010035'}}>Product Name</Text>
-                            <Text style={{fontSize:20, fontWeight:'500', color:'#FF6E4E'}}>Price</Text>
+                    <View style={styles.body_container}>
+                        <Pressable style={{width:'10%'}} onPress={()=> this.setState({checked : !this.state.checked})}>
+                            {
+                                this.state.checked ? <FontAwesome name='check-square' size={18} color='#FF6E4E'/> :
+                                <FontAwesome name='square-o' size={18} color='#FF6E4E'/>
+                            }
+                        </Pressable>
+                        <Image source={image} style={styles.product_image}/>
+                        <View style={styles.product_name_container}>
+                            <Text style={styles.product_name}>Product Name</Text>
+                            <Text style={styles.product_price}>Price</Text>
                         </View>
-                        <View style={{width:'15%', alignItems:'center'}}>
-                            <AntDesgn name='minus' size={24} color='#FF6E4E'/>
+                        <View style={{width:'10%', alignItems:'center', }}>
+                            <AntDesgn name='minus' size={18} color='#FF6E4E'/>
                             <Text>0</Text>
-                            <AntDesgn name='plus' size={24} color='#FF6E4E'/>
+                            <AntDesgn name='plus' size={18} color='#FF6E4E'/>
                         </View>
-                        <AntDesgn name='delete' size={24} color='#FF6E4E' style={{alignSelf:'center'}}/>
+                        <AntDesgn name='delete' size={18} color='#FF6E4E' style={{alignSelf:'center'}}/>
                     </View>
                 </ScrollView>
+                <View style={styles.bottom_container}>
+                    <View style={styles.bottom_inner_container}>
+                        <Text style={styles.total_txt}>Total amount</Text>
+                        <Text style={styles.total_num}>$ 9238239</Text>
+                    </View>
+                    <TouchableOpacity style={styles.checkout}>
+                        <Text style={styles.checkout_txt}>Check Out</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         )
     }
 }
+
+const styles = StyleSheet.create({
+    container : {
+        flex:1, 
+        width:'100%',
+    },
+    body_container : {
+        backgroundColor:'#ffffff', 
+        padding:10, 
+        flexDirection:'row',
+        alignItems:'center', 
+        width:'100%',
+    },
+    product_image : {
+        height:88, 
+        width:'20%', 
+        resizeMode:'stretch', 
+        borderRadius:10,
+    },
+    product_name_container : {
+        paddingLeft:17, 
+        paddingRight:33, 
+        width:'55%',
+    },
+    product_name : {
+        fontSize:20, 
+        fontWeight:'500', 
+        color:'#010035',
+    },
+    product_price : {
+        fontSize:20, 
+        fontWeight:'500', 
+        color:'#FF6E4E',
+    },
+    bottom_container : {
+        position:'absolute', 
+        bottom:0, 
+        width:'100%', 
+        paddingHorizontal:24,
+    },
+    bottom_inner_container : {
+        flexDirection:'row', 
+        justifyContent:'space-between', 
+        marginVertical:10,
+    },
+    total_txt : {
+        fontSize:15, 
+        fontWeight:'400', 
+        color:'#B7B7B7',
+    },
+    total_num : {
+        fontSize:15, 
+        fontWeight:'700', 
+        color:'#FF6E4E',
+    },
+    checkout : {
+        backgroundColor:'#FF6E4E', 
+        width:'100%', 
+        paddingVertical:10,
+        alignItems:'center', 
+        justifyContent:'center', 
+        borderRadius:50,
+        marginVertical:10
+    },
+    checkout_txt : {
+        fontSize:24, 
+        fontWeight:'700', 
+        color:'#ffffff',
+    },
+})
