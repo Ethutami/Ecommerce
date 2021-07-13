@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react'
-import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, Pressable, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { connect } from 'react-redux';
+
+import ComponentFavorites from '../Favorites';
 
 const mapStateToProps = state => {
     return {
@@ -11,21 +13,29 @@ const mapStateToProps = state => {
 export class ComponetProductCard extends PureComponent {
     render() {
         return (
-            <View style={{marginBottom:22}}>
-                <View style={styles.wrap_label}>
-                    <Text style={styles.label_txt}>Best Seller</Text>
-                    <TouchableOpacity>
-                        <Text style={styles.view_all}>see more</Text>
-                    </TouchableOpacity>
-                </View>
+            <View style={{marginBottom:22, marginTop:24}}>
+                {
+                    this.props.label === 'show' &&
+                    <View style={styles.wrap_label}>
+                        <Text style={styles.label_txt}>Best Seller</Text>
+                        <TouchableOpacity>
+                            <Text style={styles.view_all}>see more</Text>
+                        </TouchableOpacity>
+                    </View>
+                }
                 <View style={styles.entries_container}>
                     {this.props.entries.map((item)=>{
                         return(
-                            <View key={item.id} style={styles.entries_inner_containaer}>
+                            <Pressable 
+                                key={item.id} 
+                                style={styles.entries_inner_containaer}
+                                onPress={()=> this.props.navigation.navigate('DetailsProductPage')}
+                                >
                                 <Image source={item.photo} style={styles.product_item}/>
-                                <Text>{item.price}</Text>
-                                <Text>{item.name}</Text>
-                            </View>
+                                <Text style={{color:'#010035', fontSize:16, fontWeight:'700', marginLeft:21}}>{item.price}</Text>
+                                <Text style={{color:'#010035', fontSize:10, fontWeight:'400', marginLeft:21}}>{item.name}</Text>
+                                <ComponentFavorites/>
+                            </Pressable>
                             )
                     })}
                 </View>
@@ -43,7 +53,6 @@ const styles = StyleSheet.create({
         flexDirection:'row', 
         justifyContent:'space-between', 
         alignItems:'center',
-        marginTop: 24,
         marginBottom:6,
     },
     label_txt : {
@@ -68,12 +77,13 @@ const styles = StyleSheet.create({
         backgroundColor:'#ffffff', 
         borderRadius:10, 
         marginBottom:10, 
-        padding :8,
+        paddingBottom :8,
 
     },
     product_item :{
-        width:'90%', 
+        width:'100%', 
         height:168, 
+        borderRadius:10, 
         alignSelf:'center', 
         marginBottom:7,
     },

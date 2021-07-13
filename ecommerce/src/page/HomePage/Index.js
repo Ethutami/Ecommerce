@@ -13,9 +13,9 @@ export default class HomePage extends PureComponent {
             <ScrollView style={styles.container}>
                 {/* <Address/> */}
                 <ComponentProductCategory navigation={this.props.navigation}/>
-                <ComponentSearchBar/>
+                <ComponentSearchBar />
                 <ComponentProductSlider/>
-                <ComponetProductCard/>
+                <ComponetProductCard label='show' navigation={this.props.navigation}/>
             </ScrollView>
         )
     }
