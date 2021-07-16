@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Text, View, TextInput, StyleSheet, Image, TouchableOpacity, TouchableWithoutFeedback} from 'react-native'
+import { Text, View, StyleSheet, TouchableOpacity, TouchableWithoutFeedback} from 'react-native'
 
 import MaterialComunityIcon from 'react-native-vector-icons/MaterialCommunityIcons'
 import Antdesign from 'react-native-vector-icons/AntDesign'
@@ -11,7 +11,7 @@ export default class ComponentSearchBar extends PureComponent {
         super(props);  
         this.state = {  
             switch_view: false 
-         }  
+        }  
     }  
 
     render() {
