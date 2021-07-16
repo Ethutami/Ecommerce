@@ -9,11 +9,14 @@ export class ComponentNavigationBar extends PureComponent {
         const {headline} = this.props
         return (
             <View style={styles.container}>
-                <Pressable  onPress={()=>this.props.navigation.goBack('TabNav')}>
-                    <MaterialIcon name='arrow-back-ios' size={28} color='#010035'/>
-                </Pressable>
+                {
+                    headline === 'Cart' || headline === 'Favorites' ? <View></View> :
+                    <Pressable  onPress={()=>this.props.navigation.goBack('TabNav')}>
+                        <MaterialIcon name='arrow-back-ios' size={28} color='#010035'/>
+                    </Pressable>
+                }
                 <Text style={styles.headline}>{headline}</Text>
-                {   headline === 'Cart' ? <View></View> :
+                {   headline === 'Cart' || headline === 'Favorites' ? <View></View> :
                     <Pressable  
                         style={{width:50,alignItems:'center'}}
                         onPress={()=>this.props.navigation.navigate("CartScreen")}
