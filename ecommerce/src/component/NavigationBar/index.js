@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
+import { Pressable, StyleSheet, Text, View } from 'react-native'
 
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons'
 import AntDesgn from 'react-native-vector-icons/AntDesign'
@@ -12,17 +12,24 @@ export class ComponentNavigationBar extends PureComponent {
                 {
                     headline === 'Cart' || headline === 'Favorites' ? <View></View> :
                     <Pressable  onPress={()=>this.props.navigation.goBack('TabNav')}>
-                        <MaterialIcon name='arrow-back-ios' size={28} color='#010035'/>
+                        <MaterialIcon name='arrow-back-ios' size={20} color='#010035'/>
                     </Pressable>
                 }
                 <Text style={styles.headline}>{headline}</Text>
-                {   headline === 'Cart' || headline === 'Favorites' ? <View></View> :
+                {   headline === 'Cart' ? <View></View> :
+                    headline === 'Favorites' ? 
                     <Pressable  
-                        style={{width:50,alignItems:'center'}}
+                        style={styles.icon_container}
                         onPress={()=>this.props.navigation.navigate("CartScreen")}
                         >
-                        <AntDesgn name='shoppingcart' size={40} color='#FF6E4E'/>
-                        <View style={{width: 20, height:20, borderRadius:20/2, alignItems:'center', justifyContent:'center', borderColor:'#FF6E4E', borderWidth:1, backgroundColor:'#ffffff', position:'absolute', top:0, right:0}}>
+                        <AntDesgn name='search1' size={24} color='#FF6E4E'/>
+                    </Pressable>:
+                    <Pressable  
+                        style={styles.icon_container}
+                        onPress={()=>this.props.navigation.navigate("CartScreen")}
+                        >
+                        <AntDesgn name='shoppingcart' size={30} color='#FF6E4E'/>
+                        <View style={styles.num}>
                             <Text style={{fontSize:10, color:'#FF6E4E'}}>0</Text>
                         </View>
                     </Pressable>
@@ -48,5 +55,22 @@ const styles = StyleSheet.create({
         color:'#010035', 
         fontSize:20, 
         fontWeight:'bold',
+    },
+    icon_container : {
+        width:50,
+        alignItems:'center',
+    },
+    num : {
+        width: 20, 
+        height:20, 
+        borderRadius:20/2, 
+        alignItems:'center', 
+        justifyContent:'center', 
+        borderColor:'#FF6E4E', 
+        borderWidth:1, 
+        backgroundColor:'#ffffff', 
+        position:'absolute', 
+        top:-5, 
+        right:0,
     },
 })

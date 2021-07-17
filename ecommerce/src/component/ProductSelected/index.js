@@ -17,7 +17,7 @@ export class ComponentSelected extends PureComponent {
     }
     render() {
         return (
-            <View>
+            <View style={styles.container}>
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{}}>
                     <View style={{flexDirection:'row',}}>
                         {
@@ -49,6 +49,10 @@ export default connect(
 
 
 const styles = StyleSheet.create({
+    container : {
+        paddingTop:18, 
+        paddingBottom:10,
+    },
     search_by_selected : {
         width:100, 
         height:30,
