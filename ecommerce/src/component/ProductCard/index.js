@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Image, Pressable, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, Pressable, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { connect } from 'react-redux';
 
 import ComponentFavorites from '../Favorites';

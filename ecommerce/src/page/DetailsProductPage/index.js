@@ -8,6 +8,7 @@ import ComponentProductName from '../../component/ProductDetailStack/ProductName
 import ComponentShopName from '../../component/ProductDetailStack/ShopNameCard'
 import ComponentDetailProduct from '../../component/ProductDetailStack/DetailProduct'
 import ComponenetButtonCartBuy from '../../component/ProductDetailStack/Button'
+import ComponentProductReview from '../../component/ProductDetailStack/ProductReview'
 
 
 export class DetailsProducPage extends PureComponent {
@@ -20,6 +21,7 @@ export class DetailsProducPage extends PureComponent {
                     <ComponentProductName/>
                     <ComponentShopName/>
                     <ComponentDetailProduct/>
+                    <ComponentProductReview/>
                 </ScrollView>
                 <ComponenetButtonCartBuy/>
             </View>

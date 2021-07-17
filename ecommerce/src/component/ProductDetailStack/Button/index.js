@@ -13,7 +13,7 @@ export default class ComponenetButtonCartBuy extends PureComponent {
         return (
             <View style={styles.container}>
                 <TouchableOpacity style={styles.cart} onPress={()=> this.setState({addCart : this.state.addCart + 1})}>
-                    <AntDesgn name='shoppingcart' size={30} color='#ffffff'/>
+                    <AntDesgn name='shoppingcart' size={24} color='#ffffff'/>
                     <Text style={styles.cart_txt}>Add to cart</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.buy}>
@@ -35,27 +35,28 @@ const styles = StyleSheet.create({
     cart : {
         flexDirection:'column', 
         alignItems:'center', 
+        justifyContent:'center',
         backgroundColor:'#010035', 
         width:'40%', 
-        height:60, 
+        height:50, 
         borderTopStartRadius:50/2, 
         borderBottomStartRadius:50/2, 
     },
     cart_txt : {
         color:'#ffffff', 
-        fontSize:16,
+        fontSize:14,
     },
     buy : {
         backgroundColor:'#FF6E4E', 
         width:'60%', 
         alignItems:'center', 
         justifyContent:'center', 
-        height:60, 
+        height:50, 
         borderTopEndRadius:50/2, 
         borderBottomEndRadius:50/2,
     },
     buy_txt : {
-        fontSize:24, 
+        fontSize:20, 
         fontWeight:'700', 
         color:'#ffffff',
     },

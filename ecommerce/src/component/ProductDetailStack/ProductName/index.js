@@ -23,7 +23,7 @@ export class ComponentProductName extends PureComponent {
                 <View style={{}}>
                     <Text style={styles.product_name}>name</Text>
                     <Text style={styles.product_price}>Harga</Text>
-                    <View style={{flexDirection:'row',}}>
+                    <View style={styles.rating_container}>
                         {
                             this.rate.map((item, index)=>{
                                 return(
@@ -65,5 +65,9 @@ const styles = StyleSheet.create({
         fontSize:18, 
         fontWeight:'500', 
         color:'#FF6E4E',
+    },
+    rating_container : {
+        flexDirection:'row', 
+        paddingBottom:10,
     },
 })

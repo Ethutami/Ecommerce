@@ -11,7 +11,7 @@ export class ComponentShopName extends PureComponent {
                     <Text style={styles.shop_address}>Shop Adress</Text>
                 </View>
                 <View style={styles.number_of_product_container}>
-                    <Text style={{fontSize:40, color:'#FF6E4E'}}>40</Text>
+                    <Text style={{fontSize:30, color:'#FF6E4E'}}>40</Text>
                     <Text style={{color:'#B3B3C3', fontSize:16}}>Product</Text>
                 </View>
             </View>
@@ -32,9 +32,9 @@ const styles = StyleSheet.create({
         alignItems:'center',
     },
     circle_item : {
-        width:80, 
-        height:80, 
-        borderRadius:80/2, 
+        width:70, 
+        height:70, 
+        borderRadius:70/2, 
         borderWidth:1,
         borderColor:'#FF6E4E',
     },
