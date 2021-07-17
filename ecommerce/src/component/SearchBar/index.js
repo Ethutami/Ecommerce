@@ -39,7 +39,8 @@ export default class ComponentSearchBar extends PureComponent {
 
 const styles = StyleSheet.create({
     container: {
-        paddingVertical:18, 
+        paddingTop:14, 
+        paddingBottom:10,
         flexDirection:'row', 
         justifyContent:'space-between',
         alignItems:'center',

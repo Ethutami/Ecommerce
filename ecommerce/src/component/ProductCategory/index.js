@@ -15,7 +15,7 @@ export class ComponentProductCategory extends PureComponent {
     
     render() {
         return (
-            <View style={{paddingVertical:18}}>
+            <View style={{paddingVertical:16}}>
                 <View style={styles.wrap_label}>
                     <Text style={styles.label_txt}>Select Category</Text>
                     <TouchableOpacity>
