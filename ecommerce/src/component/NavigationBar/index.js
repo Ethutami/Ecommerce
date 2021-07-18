@@ -10,20 +10,20 @@ export class ComponentNavigationBar extends PureComponent {
         return (
             <View style={styles.container}>
                 {
-                    headline === 'Cart' || headline === 'Favorites' ? <View></View> :
+                    headline === 'Favorites' ? <View></View> :
                     <Pressable  onPress={()=>this.props.navigation.goBack('TabNav')}>
                         <MaterialIcon name='arrow-back-ios' size={20} color='#010035'/>
                     </Pressable>
                 }
                 <Text style={styles.headline}>{headline}</Text>
                 {   headline === 'Cart' ? <View></View> :
-                    headline === 'Favorites' ? 
+                    headline === 'Favorites' ?
                     <Pressable  
                         style={styles.icon_container}
-                        onPress={()=>this.props.navigation.navigate("CartScreen")}
+                        onPress={()=>this.props.navigation.navigate("SearchPage")}
                         >
                         <AntDesgn name='search1' size={24} color='#FF6E4E'/>
-                    </Pressable>:
+                    </Pressable> :
                     <Pressable  
                         style={styles.icon_container}
                         onPress={()=>this.props.navigation.navigate("CartScreen")}

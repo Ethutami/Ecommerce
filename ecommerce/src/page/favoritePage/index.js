@@ -9,7 +9,7 @@ export default class FavoritePage extends PureComponent {
     render() {
         return (
             <View style={{flex:1,}}>
-                <ComponentNavigationBar headline='Favorites'/>
+                <ComponentNavigationBar headline='Favorites' navigation={this.props.navigation}/>
                 <ComponentSelected/>
                 <ScrollView style={{paddingHorizontal:10, }}>
                     <ComponetProductCard navigation={this.props.navigation}/>

@@ -15,7 +15,7 @@ export class DetailsProducPage extends PureComponent {
     render() {
         return (
             <View style={{flex:1,}}>
-                <ComponentNavigationBar headline='Details Poduct' navigation={this.props.navigation}/>
+                <ComponentNavigationBar headline='Details Product' navigation={this.props.navigation}/>
                 <ScrollView>
                     <ComponentProductCarausel/>
                     <ComponentProductName/>
