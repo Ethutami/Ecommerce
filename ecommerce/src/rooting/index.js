@@ -9,6 +9,7 @@ import Entypo from 'react-native-vector-icons/Entypo'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 
 import LaunchPage from '../page/LaunchPage';
+import LoginPage from '../page/Login_LogoutPage/Login'
 import HomePage from '../page/HomePage/Index';
 import CartPage from '../page/CartPage';
 import ProfilePage from '../page/ProfilePage';
@@ -16,6 +17,9 @@ import FavoritePage from '../page/FavoritePage';
 import ShoppingPage from '../page/ShoppingPage';
 import SearchPage from '../page/SearchPage';
 import DetailsProducPage from '../page/DetailsProductPage';
+import OrderPage from '../page/OrderPage';
+import UserReviewPage from '../page/UserReview';
+import SettingsPage from '../page/SettingsPage';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -81,9 +85,13 @@ export default class RootStack extends PureComponent {
                 <Stack.Navigator initialRouteName='Launch' headerMode={false}>
                     <Stack.Screen name="Launch" component={LaunchPage} />
                     <Stack.Screen name="TabNav" component={TabNavigation} />
+                    <Stack.Screen name="LoginPage" component={LoginPage} />
                     <Stack.Screen name="ShoppingPage" component={ShoppingPage} initialParams={{Headline: ''}}/>
                     <Stack.Screen name="SearchPage" component={SearchPage} />
                     <Stack.Screen name="DetailsProductPage" component={DetailsProducPage} />
+                    <Stack.Screen name="OrderPage" component={OrderPage} />
+                    <Stack.Screen name="UserReviewPage" component={UserReviewPage} />
+                    <Stack.Screen name="SettingsPage" component={SettingsPage} />
                 </Stack.Navigator>
             </NavigationContainer>
         )
