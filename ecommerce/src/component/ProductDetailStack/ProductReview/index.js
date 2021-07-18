@@ -18,8 +18,8 @@ export class ComponentProductReview extends PureComponent {
     render() {
         this.rating()
         return (
-            <View style={{width:'100%', backgroundColor:'#ffffff', padding:10, marginBottom:5}}>
-                <View style={{flexDirection:'row', alignItems:'center', justifyContent:'space-between'}}>
+            <View style={styles.container}>
+                <View style={styles.user_container}>
                     <View style={{flexDirection:'row'}}>
                         <Image source={image1} style={styles.user_image}/>
                         <View style={{marginLeft:14}}>
@@ -41,7 +41,7 @@ export class ComponentProductReview extends PureComponent {
                             </View>
                         </View>
                     </View>
-                    <Text style={{marginEnd:20, color:'#B3B3C3', fontSize:14}}>29/02/20</Text>
+                    <Text style={styles.date_review}>29/02/20</Text>
                 </View>
                 <Text style={{marginHorizontal:20, marginTop:10}}>
                     Gila sih ini toko keren bgt padahal chekout banyak tapi langsung di kirim hari itu juga dan pengiriman juga cepet
@@ -55,6 +55,17 @@ export class ComponentProductReview extends PureComponent {
 export default ComponentProductReview
 
 const styles = StyleSheet.create({
+    container : {
+        width:'100%', 
+        backgroundColor:'#ffffff', 
+        padding:10, 
+        marginBottom:5,
+    },
+    user_container : {
+        flexDirection:'row', 
+        alignItems:'center',
+        justifyContent:'space-between',
+    },
     user_image : {
         width:40, 
         height:40, 
@@ -62,5 +73,10 @@ const styles = StyleSheet.create({
         borderWidth:1,
         borderColor:'#FF6E4E',
         backgroundColor:'#E5E5E5'
+    },
+    date_review : {
+        marginEnd:20, 
+        color:'#B3B3C3', 
+        fontSize:14,
     },
 })

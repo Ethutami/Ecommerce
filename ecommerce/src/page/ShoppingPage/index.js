@@ -19,7 +19,7 @@ export class ShoppingPage extends PureComponent {
                     <View style={styles.inner_container}>
                         <ComponentSearchBar navigation={this.props.navigation}/>
                         <ComponentSelected/>
-                        <ComponetProductCard/>
+                        <ComponetProductCard navigation={this.props.navigation}/>
                     </View>
                 </ScrollView>
             </View>
