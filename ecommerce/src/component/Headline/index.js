@@ -5,7 +5,7 @@ export default class ComponentHeadline extends PureComponent {
     render() {
         const {headline, swipe} = this.props
         return (
-            <View style={headline === 'Login' || headline === 'Register' ? styles.container_ : styles.container}>
+            <View style={headline === 'Login' || headline === 'Register' || headline === 'Forgot password' ? styles.container_ : styles.container}>
                 <Text style={swipe === 'Login' || swipe === 'Register' ? styles.headline_ : styles.headline}>{headline}</Text>
             </View>
         )
