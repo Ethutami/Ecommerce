@@ -16,7 +16,7 @@ export default class ComponenetButtonCartBuy extends PureComponent {
                     <AntDesgn name='shoppingcart' size={24} color='#ffffff'/>
                     <Text style={styles.cart_txt}>Add to cart</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.buy}>
+                <TouchableOpacity style={styles.buy} onPress={()=> this.props.navigation.navigate('CartScreen')}>
                     <Text style={styles.buy_txt}>Buy Now</Text>
                 </TouchableOpacity>
                 

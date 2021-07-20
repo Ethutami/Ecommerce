@@ -23,7 +23,7 @@ export class DetailsProducPage extends PureComponent {
                     <ComponentDetailProduct/>
                     <ComponentProductReview/>
                 </ScrollView>
-                <ComponenetButtonCartBuy/>
+                <ComponenetButtonCartBuy navigation={this.props.navigation}/>
             </View>
         )
     }
