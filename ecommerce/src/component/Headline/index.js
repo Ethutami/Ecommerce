@@ -5,7 +5,7 @@ export default class ComponentHeadline extends PureComponent {
     render() {
         const {headline} = this.props
         return (
-            <View style={styles.container}>
+            <View style={headline === 'Login' || headline === 'Register' ? styles.container_ : styles.container}>
                 <Text style={styles.headline}>{headline}</Text>
             </View>
         )
@@ -17,6 +17,11 @@ const styles = StyleSheet.create({
         backgroundColor:'#ffffff', 
         paddingHorizontal: 24, 
         paddingBottom:10,
+        paddingTop:16,
+    },
+    container_ : {
+        paddingBottom:10,
+        paddingTop:16,
     },
     headline : {
         color:'#010035', 

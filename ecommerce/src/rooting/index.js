@@ -9,6 +9,8 @@ import Entypo from 'react-native-vector-icons/Entypo'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 
 import LaunchPage from '../page/LaunchPage';
+import LoginPage from '../page/Login_RegisterPage/Login'
+import RegisterPage from '../page/Login_RegisterPage/Register';
 import HomePage from '../page/HomePage/Index';
 import CartPage from '../page/CartPage';
 import ProfilePage from '../page/ProfilePage';
@@ -86,6 +88,8 @@ export default class RootStack extends PureComponent {
                 <Stack.Navigator initialRouteName='Launch' headerMode={false}>
                     <Stack.Screen name="Launch" component={LaunchPage} />
                     <Stack.Screen name="TabNav" component={TabNavigation} />
+                    <Stack.Screen name="LoginPage" component={LoginPage} />
+                    <Stack.Screen name="RegisterPage" component={RegisterPage} />
                     <Stack.Screen name="ShoppingPage" component={ShoppingPage} initialParams={{Headline: ''}}/>
                     <Stack.Screen name="SearchPage" component={SearchPage} />
                     <Stack.Screen name="DetailsProductPage" component={DetailsProducPage} />

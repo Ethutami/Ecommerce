@@ -6,17 +6,17 @@ import AntDesgn from 'react-native-vector-icons/AntDesign'
 
 export class ComponentNavigationBar extends PureComponent {
     render() {
-        const {headline} = this.props
+        const {headline, pagename} = this.props
         return (
-            <View style={styles.container}>
+            <View style={headline === '' ? styles.container_ : styles.container}>
                 {
                     headline === 'Favorites' ? <View></View> :
-                    <Pressable  onPress={()=>this.props.navigation.goBack('TabNav')}>
+                    <Pressable  onPress={()=>{headline === '' ? this.props.navigation.navigate(pagename) : this.props.navigation.goBack()}}>
                         <MaterialIcon name='arrow-back-ios' size={20} color='#010035'/>
                     </Pressable>
                 }
                 <Text style={styles.headline}>{headline}</Text>
-                {   headline === 'Cart' ? <View></View> :
+                {   headline === 'Cart' || headline === '' ? <View></View> :
                     headline === 'Favorites' ?
                     <Pressable  
                         style={styles.icon_container}
@@ -45,6 +45,15 @@ const styles = StyleSheet.create({
     container : {
         backgroundColor:'#ffffff',
         paddingHorizontal:18,
+        paddingTop:18,
+        paddingBottom:10,
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignItems:'center'
+    },
+    container_ : {
+        //backgroundColor:'#ffffff',
+        //paddingHorizontal:10,
         paddingTop:18,
         paddingBottom:10,
         flexDirection:'row',
