@@ -1,10 +1,12 @@
 import React, { PureComponent } from 'react'
-import { Image, Pressable, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
 
 import AntDesgn from 'react-native-vector-icons/AntDesign'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import ComponentNavigationBar from '../../component/NavigationBar'
+import ComponentButton from '../../component/Button'
 import image from '../../assets/image/1.jpg'
+
 
 
 export default class CartPage extends PureComponent {
@@ -44,9 +46,7 @@ export default class CartPage extends PureComponent {
                         <Text style={styles.total_txt}>Total amount</Text>
                         <Text style={styles.total_num}>$ 9238239</Text>
                     </View>
-                    <TouchableOpacity style={styles.checkout}>
-                        <Text style={styles.checkout_txt}>Check Out</Text>
-                    </TouchableOpacity>
+                    <ComponentButton navigation={this.props.navigation} pagename='ShippingPage' label='Check Out'/>
                 </View>
             </View>
         )
@@ -107,18 +107,5 @@ const styles = StyleSheet.create({
         fontWeight:'700', 
         color:'#FF6E4E',
     },
-    checkout : {
-        backgroundColor:'#FF6E4E', 
-        width:'100%', 
-        paddingVertical:10,
-        alignItems:'center', 
-        justifyContent:'center', 
-        borderRadius:50,
-        marginVertical:10
-    },
-    checkout_txt : {
-        fontSize:24, 
-        fontWeight:'700', 
-        color:'#ffffff',
-    },
+    
 })
