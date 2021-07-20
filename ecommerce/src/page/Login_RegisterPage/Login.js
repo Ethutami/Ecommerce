@@ -12,8 +12,6 @@ export class LoginPage extends PureComponent {
     render() {
         return (
             <View style={styles.container}>
-                <ComponentNavigationBar headline='' navigation = {this.props.navigation} pagename='RegisterPage'/>
-                <ComponentHeadline headline = 'Login'/>
                 <View style={{paddingTop:73,}}>
                     <ComponentTextField label= 'Email'/>
                     <ComponentTextField label= 'Password'/>

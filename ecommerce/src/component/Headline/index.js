@@ -3,10 +3,10 @@ import { StyleSheet, Text, View } from 'react-native'
 
 export default class ComponentHeadline extends PureComponent {
     render() {
-        const {headline} = this.props
+        const {headline, swipe} = this.props
         return (
             <View style={headline === 'Login' || headline === 'Register' ? styles.container_ : styles.container}>
-                <Text style={styles.headline}>{headline}</Text>
+                <Text style={swipe === 'Login' || swipe === 'Register' ? styles.headline_ : styles.headline}>{headline}</Text>
             </View>
         )
     }
@@ -26,6 +26,11 @@ const styles = StyleSheet.create({
     headline : {
         color:'#010035', 
         fontSize:35, 
+        fontWeight:'bold',
+    },
+    headline_ : {
+        color:'#B7B7B7', 
+        fontSize:30, 
         fontWeight:'bold',
     },
 })

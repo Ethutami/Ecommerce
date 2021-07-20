@@ -47,7 +47,7 @@ export default class ProfilePage extends PureComponent {
                 { this._renderContent('Settings', 'Notification, password')}
                 <Pressable 
                     style={styles.logout_container}
-                    onPress={()=> this.props.navigation.navigate('LoginPage')}
+                    onPress={()=> this.props.navigation.navigate('LoginRegisterPage')}
                     >
                     <SimpleLineIcon 
                         name='logout' 
