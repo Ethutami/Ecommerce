@@ -37,9 +37,10 @@
 
 1. Open your terminal or command prompt
 2. Type `git clone https://github.com/Ethutami/Movee.git`
-3. Open the folder and type `npm install` for install dependencies
-4. Type `npx react-native run-android` for run this app. **_Make sure your device is connected with debugging mode_**.
-5. Login with the user below to enter the application.
+3. Git checkout develotment
+4. Open the folder and type `npm install` for install dependencies
+5. Type `npx react-native run-android` for run this app. **_Make sure your device is connected with debugging mode_**.
+6. Login with the user below to enter the application.
 
 
 ## Screenshots
