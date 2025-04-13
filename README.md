@@ -1,6 +1,6 @@
 <h1 align="center">Ecommerce APP</h1>
 <p align="center">
-  <img width="250" src="./image/logo.png"/>
+  <img width="250" src="./ecommerce/src/image/logo.png"/>
 </p>
 <p align="center">
   Built with React Native
@@ -46,12 +46,12 @@
 ## Screenshots
 
 <div align="center">
-    <img width="200" src="./image/e-commerce1.png">   
-    <img width="200" src="./image/e-commerce2.png">
+    <img width="200" src="./ecommerce/src/image/e-commerce1.png">   
+    <img width="200" src="./ecommerce/src/image/e-commerce2.png">
 </div>
 <div align="center">
-    <img width="200" src="./image/e-commerce3.png">
-    <img width="200" src="./image/e-commerce4.png">   
+    <img width="200" src="./ecommerce/src/image/e-commerce3.png">
+    <img width="200" src="./ecommerce/src/image/e-commerce4.png">   
 </div>
 
 
@@ -68,7 +68,7 @@ Copyright © 2021 by Ethutami
     <tr>
       <td align="center">
         <a href="https://github.com/Ethutami">
-          <img width="100" src="./image/me.jpg" alt="Ethutami"><br/>
+          <img width="100" src="./ecommerce/src/image/me.jpg" alt="Ethutami"><br/>
           <sub><b>Ethutami</b></sub>
         </a>
       </td>
