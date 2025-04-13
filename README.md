@@ -1,6 +1,6 @@
 <h1 align="center">Ecommerce APP</h1>
 <p align="center">
-<!--   <img width="250" src="./Image/logo.png"/> -->
+  <img width="250" src="./Image/logo.png"/>
 </p>
 <p align="center">
   Built with React Native
